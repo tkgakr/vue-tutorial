@@ -6,6 +6,6 @@ const childMsg = ref('No child msg yet')
 </script>
 
 <template>
-<ChildComp />
-<p>{{ childMsg }}</p>
+  <ChildComp />
+  <p>{{ childMsg }}</p>
 </template>

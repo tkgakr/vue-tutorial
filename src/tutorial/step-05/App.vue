@@ -9,6 +9,6 @@ function onInput(e) {
 </script>
 
 <template>
-<input :value="text" @input="onInput" placeholder="Type here">
-<p>{{ text }}</p>
+  <input :value="text" @input="onInput" placeholder="Type here">
+  <p>{{ text }}</p>
 </template>

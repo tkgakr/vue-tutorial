@@ -3,5 +3,5 @@
 </script>
 
 <template>
-<!-- render child component -->
+  <!-- render child component -->
 </template>

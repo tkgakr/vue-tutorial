@@ -16,8 +16,8 @@ fetchData()
 </script>
 
 <template>
-<p>Todo id: {{ todoId }}</p>
-<button @click="todoId++" :disabled="!todoData">Fetch next todo</button>
-<p v-if="!todoData">Loading...</p>
-<pre v-else>{{ todoData }}</pre>
+  <p>Todo id: {{ todoId }}</p>
+  <button @click="todoId++" :disabled="!todoData">Fetch next todo</button>
+  <p v-if="!todoData">Loading...</p>
+  <pre v-else>{{ todoData }}</pre>
 </template>

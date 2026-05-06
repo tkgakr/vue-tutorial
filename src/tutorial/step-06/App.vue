@@ -9,7 +9,7 @@ function toggle() {
 </script>
 
 <template>
-<button @click="toggle">Toggle</button>
-<h1>Vue is awesome!</h1>
-<h1>Oh no 😢</h1>
+  <button @click="toggle">Toggle</button>
+  <h1>Vue is awesome!</h1>
+  <h1>Oh no 😢</h1>
 </template>

@@ -5,5 +5,5 @@ const pElementRef = ref(null)
 </script>
 
 <template>
-<p ref="pElementRef">Hello</p>
+  <p ref="pElementRef">Hello</p>
 </template>

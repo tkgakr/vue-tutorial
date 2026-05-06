@@ -1,3 +1,3 @@
 <template>
-<slot>Fallback content</slot>
+  <slot>Fallback content</slot>
 </template>
