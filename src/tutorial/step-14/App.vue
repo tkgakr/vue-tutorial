@@ -1,20 +1,10 @@
-<template>
-<ChildComp></ChildComp>
-</template>
-<script>
+<script setup>
 import { ref } from 'vue'
 import ChildComp from './ChildComp.vue'
 
-export default {
-  components: {
-    ChildComp
-  },
-  setup() {
-    const msg = ref('from parent')
-
-    return {
-      msg
-    }
-  }
-}
+const msg = ref('from parent')
 </script>
+
+<template>
+<ChildComp></ChildComp>
+</template>

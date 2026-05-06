@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { computed, markRaw, ref } from 'vue'
 import { tutorialSteps } from './tutorial/metadata.js'
 
@@ -17,35 +17,22 @@ function getInitialStep() {
   return tutorialSteps.some((item) => item.number === step) ? step : 1
 }
 
-export default {
-  setup() {
-    const currentStep = ref(getInitialStep())
+const currentStep = ref(getInitialStep())
 
-    const selected = computed(() =>
-      tutorialSteps.find((step) => step.number === currentStep.value)
-    )
+const selected = computed(() =>
+  tutorialSteps.find((step) => step.number === currentStep.value)
+)
 
-    const currentComponent = computed(() => stepComponents[currentStep.value])
-    const officialUrl = computed(
-      () => `https://ja.vuejs.org/tutorial/#step-${currentStep.value}`
-    )
+const currentComponent = computed(() => stepComponents[currentStep.value])
+const officialUrl = computed(
+  () => `https://ja.vuejs.org/tutorial/#step-${currentStep.value}`
+)
 
-    function selectStep(step) {
-      currentStep.value = Number(step)
-      const url = new URL(window.location.href)
-      url.searchParams.set('step', String(currentStep.value))
-      window.history.replaceState({}, '', url)
-    }
-
-    return {
-      currentComponent,
-      currentStep,
-      officialUrl,
-      selectStep,
-      selected,
-      tutorialSteps
-    }
-  }
+function selectStep(step) {
+  currentStep.value = Number(step)
+  const url = new URL(window.location.href)
+  url.searchParams.set('step', String(currentStep.value))
+  window.history.replaceState({}, '', url)
 }
 </script>
 
