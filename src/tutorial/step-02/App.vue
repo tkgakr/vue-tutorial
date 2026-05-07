@@ -1,10 +1,13 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 
-// component logic
-// declare some reactive state here.
+const counter = reactive({
+  count: 0
+})
+const message = ref('Hello World!')
 </script>
 
 <template>
-  <h1>Make me dynamic!</h1>
+  <h1>{{ message }}</h1>
+  <p>Count is: {{ counter.count }}</p>
 </template>
