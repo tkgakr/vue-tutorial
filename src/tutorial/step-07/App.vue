@@ -12,12 +12,12 @@ const todos = ref([
 ])
 
 function addTodo() {
-  // ...
+  todos.value.push({ id: id++, text: newTodo.value })
   newTodo.value = ''
 }
 
 function removeTodo(todo) {
-  // ...
+  todos.value = todos.value.filter((item) => item !== todo)
 }
 </script>
 
