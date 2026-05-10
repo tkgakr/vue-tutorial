@@ -1,7 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted} from 'vue'
 
 const pElementRef = ref(null)
+
+onMounted(() => {
+  pElementRef.value.textContent = "コンポーネントがマウントされました。"
+})
 </script>
 
 <template>
