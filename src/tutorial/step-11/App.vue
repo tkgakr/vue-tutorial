@@ -1,7 +1,7 @@
 <script setup>
-// import child component
+import ChildComp from './ChildComp.vue'
 </script>
 
 <template>
-  <!-- render child component -->
+  <ChildComp />
 </template>
