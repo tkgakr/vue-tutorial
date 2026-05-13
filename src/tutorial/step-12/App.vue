@@ -6,5 +6,5 @@ const greeting = ref('Hello from parent')
 </script>
 
 <template>
-  <ChildComp />
+  <ChildComp :msg="greeting" />
 </template>
