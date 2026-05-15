@@ -6,5 +6,7 @@ const msg = ref('from parent')
 </script>
 
 <template>
-  <ChildComp></ChildComp>
+  <ChildComp>
+    This is some slot content {{ msg }}!
+  </ChildComp>
 </template>
